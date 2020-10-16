@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 
-const JWT_SIGN_SECRET = 'BazzarDuBizzare8';
+const JWT_SIGN_SECRET = 'Stargazer8';
 
 exports.generateTokenForUser = userData => {
     return jwt.sign({
