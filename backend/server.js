@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const apiRouter = require('./apiRouter');
 
 const app = express();
 
@@ -10,9 +11,7 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false}));
 app.use(bodyParser.json()); 
 
-app.get('/', (req, res) => {
-    res.json({message:'Hello World'});
-});
+app.use('/api/', apiRouter);
 
 // Set PORT listen for resquests
 const PORT = process.env.PORT || 8080;
